@@ -1,0 +1,1 @@
+console.log([0,1,2,3,0,4].map(Boolean))

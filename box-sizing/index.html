@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box sizing</title>
+    <style>
+        *{
+            /* box-sizing: border-box; */
+            /* background: hsl(0 100% 50% / .1); */
+            /* margin-top: 20px; */
+        }
+        .box1{
+            width: 200px;            height: 200px;
+            padding: 20px;
+            background-color: red;
+        }
+        .box1::after{
+            content: '';
+            box-shadow: 2px 2px 4px black;
+            height: 20px;
+            width: 20px;
+            background-color: lightblue;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            background-color: lime;
+        }
+        p{
+            text-align: center;
+        }
+        p::before{
+            content: 'supreme';
+            background-color: red;
+            color: white;
+            display: block;
+            text-align: center;
+        }
+        p::after{
+            content: 'supreme';
+            background-color: red;
+            color: white;
+            display: block;
+            text-align: center;
+        }
+        .button{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ut?</p>
+    <div class="button">
+        <code>Button</code>
+    </div>
+</body>
+</html>

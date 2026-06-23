@@ -4,6 +4,6 @@ class Rectangle {
     this.height = height;
   }
 }
-const rectangle = new Rectangle(10, 20);
+const rectangle = new Rectangle("120px", "200px");
 console.log(rectangle.width);
 console.log(rectangle.height);

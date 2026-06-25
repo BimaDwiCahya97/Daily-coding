@@ -3,7 +3,27 @@ class Rectangle {
     this.width = width;
     this.height = height;
   }
+  set width(newWidth) {
+    if (newWidth > 0) {
+      this._width = newWidth;
+    } else {
+      console.error("width must be a positive number");
+    }
+  }
+  set height(newHeight) {
+    if (newHeight > 0) {
+      this._height = newHeight;
+    } else {
+      console.error("height must be a positive number");
+    }
+  }
+  get width() {
+    return this._width;
+  }
+  get height() {
+    return this._height;
+  }
 }
-const rectangle = new Rectangle("120px", "250px");
-console.log(rectangle.width);
-console.log(rectangle.height);
+const rectangle = new Rectangle(120, 250);
+console.log(`width = ${rectangle.width}`);
+console.log(`height = ${rectangle.height}`);
